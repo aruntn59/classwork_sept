@@ -11,6 +11,7 @@ class _Login_statefulState extends State<Login_stateful> {
   String username = "admin@gmail.com";
   String pass = 'abc123';
   final key1 = GlobalKey<FormState>();
+  bool passwordhidden=true;
 
   @override
   Widget build(BuildContext context) {
@@ -39,9 +40,13 @@ class _Login_statefulState extends State<Login_stateful> {
                   },
                 ),
               ),
+
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: TextFormField(
+                  obscuringCharacter: "*",
+                  obscureText: passwordhidden,
+
                   validator: (password){
                     if(password!.isEmpty || password != pass){
                       return 'Password must not be empty/ password length must be > 6';
@@ -49,7 +54,20 @@ class _Login_statefulState extends State<Login_stateful> {
                       return null;
                     }
                   },
-                  decoration: const InputDecoration(
+                  decoration:  InputDecoration(
+                    suffixIcon: IconButton(
+                        onPressed: (){
+                          setState(() {
+                            if(passwordhidden==true){
+                              passwordhidden=false;
+                            }else {
+                              passwordhidden = true;
+                            }
+                          });
+                        },
+                        icon:Icon(passwordhidden == true
+                        ? Icons.visibility_off_sharp
+                        : Icons.visibility)),
                       border: OutlineInputBorder(),
                       hintText: 'Password'),
                 ),
