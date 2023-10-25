@@ -1,46 +1,48 @@
-List<Map<String,dynamic>> products =[
+List<Map<String, dynamic>> products = [
   {
-    'id' :1,
-    'name':"Dress 1",
-    'price':300,
-    'rating':4,
-    'image':"https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1687842433_3385347.jpg?w=360&dpr=1.5",
-    'description':'t shirts for men'
+    'id'    : 1,
+    'name'  : "Dress 1",
+    'price' : 600,
+    'rating': 4,
+    'image' : "https://as1.ftcdn.net/v2/jpg/00/96/74/82/1000_F_96748234_L1OpQlE8LQJmmjGpeQZvcOVOkhxCPzCa.jpg",
+    'description':
+    'Buy Women Dresses Online in India - Choose from a variety of options. Get Upto 15%-50% OFF on the latest collection of Women Dresses and enjoy'
+  },
+  {
+    'id'    : 2,
+    'name'  : "Dress 2",
+    'price' : 700,
+    'rating': 4.7,
+    'image' : "https://as2.ftcdn.net/v2/jpg/01/03/02/19/1000_F_103021937_v01lZ0rnIIsyRTBzbINQ02jOxMzEBgZx.jpg",
+    'description':
+    'Buy Women Dresses Online in India - Choose from a variety of options. Get Upto 15%-50% OFF on the latest collection of Women Dresses and enjoy'
+  },
+  {
+    'id'    : 3,
+    'name'  : "Dress 3",
+    'price' : 500,
+    'rating': 4.2,
+    'image' : "https://m.media-amazon.com/images/I/81NfvQMK7nL._UY879_.jpg",
+    'description':
+    'Buy Women Dresses Online in India - Choose from a variety of options. Get Upto 15%-50% OFF on the latest collection of Women Dresses and enjoy'
+  },
+  {
+    'id'    : 4,
+    'name'  : "Dress 4",
+    'price' : 560,
+    'rating': 4.8,
+    'image' : "https://m.media-amazon.com/images/I/71ShBw4g6GL._UX679_.jpg",
+    'description':
+    'Buy Women Dresses Online in India - Choose from a variety of options. Get Upto 15%-50% OFF on the latest collection of Women Dresses and enjoy'
+  },
+  {
+    'id'    : 5,
+    'name'  : "Dress 5",
+    'price' : 810,
+    'rating': 5,
+    'image' : "https://rukminim2.flixcart.com/image/850/1000/l3q7jww0/shirt/8/p/l/xl-n-noel-prototype-original-imagesahxnf6kgjs.jpeg?q=90",
+    'description':
+    'Buy Women Dresses Online in India - Choose from a variety of options. Get Upto 15%-50% OFF on the latest collection of Women Dresses and enjoy'
   },
 
-  {
-    'id' :2,
-    'name':"Dress 2",
-    'price':287,
-    'rating':3.5,
-    'image':"https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1694834120_3747207.jpg?format=webp&w=360&dpr=1.5",
-    'description':'t shirts for men'
-  },
-
-  {
-    'id' :3,
-    'name':"Dress 3",
-    'price':350,
-    'rating':4.2,
-    'image':"https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1695647467_4191387.jpg?format=webp&w=1080&dpr=1.5",
-    'description':'t shirts for men'
-  },
-
-  {
-    'id' :4,
-    'name':"Dress 4",
-    'price':380,
-    'rating':4.5,
-    'image':"https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1695457552_6981568.jpg?format=webp&w=360&dpr=1.5",
-    'description':'t shirts for men'
-  },
-
-  {
-    'id' :5,
-    'name':"Dress 5",
-    'price':470,
-    'rating':4.7,
-    'image':"https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1693583278_8698271.jpg?format=webp&w=360&dpr=1.5",
-    'description':'t shirts for men'
-  },
 ];

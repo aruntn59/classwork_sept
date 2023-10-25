@@ -26,27 +26,26 @@ class ProductMain extends StatelessWidget {
         padding: const EdgeInsets.all(15),
         /// products list le oro map um one by one ayit  product il varum since list.map() is iterable
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-        children: products
-            .map((product) => InkWell(
-          onTap: () => Navigator.of(context)
-              .pushNamed('details', arguments: product['id']),
-          child: Card(
+        children: List.generate(
+            products.length,
+                (index) => InkWell(
+                onTap: ()=> Navigator.of(context).pushNamed('details', arguments: products[index]['id']),
+        child: Card(
             child: Column(
-              children: [
+                children: [
                 Container(
-                    height: 100,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            fit: BoxFit.contain,
-                            image: NetworkImage(product['image'])))),
-                Text(product['name']),
-                Text('${product['price']}\$'),
-              ],
-            ),
-          ),
-        ))
-            .toList(),
+                height: 100,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        fit: BoxFit.contain,
+                        image: NetworkImage(products[index]['image'])))), // DecorationImage, BoXD
+        Text(products[index]["name"]),
+        Text('${products[index]['price']}\$'),
+        ],
       ),
-    );
+      ),
+      )),
+      ),
+      );
   }
 }

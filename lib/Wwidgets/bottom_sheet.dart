@@ -1,21 +1,55 @@
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
-class btm_sheet extends StatelessWidget {
-  const btm_sheet({super.key});
+import '../grid_view/Gridview2.dart';
+import '../grid_view/Gridview5.dart';
+import '../state_full/stateful_login.dart';
+import 'fi_card_use_stack.dart';
+// import 'package:project_july_new/fi%20card%20using_stack.dart';
+// import 'package:project_july_new/gridview_examples/gridview2.dart';
+// import 'package:project_july_new/gridview_examples/gridview5.dart';
+// import 'package:project_july_new/stateful_login.dart';
+
+void main() {
+  runApp(MaterialApp(
+    home: BottomBarEx(),
+  ));
+}
+
+class BottomBarEx extends StatefulWidget {
+  @override
+  State<BottomBarEx> createState() => _BottomBarExState();
+}
+
+class _BottomBarExState extends State<BottomBarEx> {
+  int index = 0;
+  var screens = [
+    FiCard(),
+    GridView2(),
+    GridView5(),
+    Login_stateful()];
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body:Column(
-          children: [
-      child:Container(
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                fit:BoxFit.cover,
-                image:NetworkImage("https://images.unsplash.com/photo-1691495257420-bc31c53097f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"))),
-      ),
-   ] ),
-    );
+    return Scaffold(
+      bottomNavigationBar: ConvexAppBar(
+          style: TabStyle.react,
+          items: const [
+            TabItem(icon: Icons.list),
+            TabItem(icon: Icons.calendar_today),
+            TabItem(icon: Icons.assessment),
+            TabItem(icon: Icons.account_box),
 
+          ],
+          initialActiveIndex: index,
+          onTap: (tapedindex) {
+            setState(() {
+              index =
+                  tapedindex; // here index value change according to each tap
+            });
+          }
+      ),
+      body: screens[index],
+    );
   }
 }
